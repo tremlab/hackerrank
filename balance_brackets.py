@@ -11,8 +11,12 @@ import sys
 
 # Complete the isBalanced function below.
 def isBalanced(s):
+# Hackerrank provided the above
+# *****************************************************
     open_brackets = []
 
+#   I knew I wouldn't want to write out every single "if" case,
+#   so, using these vars to separate the logic into its parts.
     b_open = ["{", "(", "[" ]
     b_close = ["}", ")", "]" ]
 
@@ -23,6 +27,7 @@ def isBalanced(s):
         }
 
     def eval_b(b_open):
+        # argh!  I had accidentally typed b_open below. Lots of fun catching that mistake. :(
         if len(open_brackets) == 0:
             return "NO"
         last = open_brackets.pop()
@@ -44,6 +49,9 @@ def isBalanced(s):
     else:
         return "NO"
 
+
+# ***********************************************
+# Hackerran prvidied the below:
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
